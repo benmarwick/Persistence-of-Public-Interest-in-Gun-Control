@@ -6,7 +6,7 @@ Ben Marwick
 Introduction
 ------------
 
-Reflecting on the mass shooting event at the Stoneman Douglas High School in Florida in Feb 2018, I thought I'd take a quick look over the weekend to see how it compares to previous events in the US. In particular, I want to see if we can detect any differences in the public reaction to this event, compared to previous events. Part of the motivation comes from a story on *Vox* ['Teenagers are doing the impossible: keeping America's attention on guns'](https://www.vox.com/policy-and-politics/2018/2/21/17033308/florida-shooting-media-gun-control) that claims we seeing a sustained reaction to a mass shooting that we haven't seen before. A similar story appeared on [*Mashable*](https://mashable.com/2018/02/19/parkland-students-gun-control-debate-google-trends/#fAY2Ogo8Jkqb). I was also inspired by tweets from [Nate Silver](https://twitter.com/NateSilver538/status/965352547383959552) and [Alexander Agadjanian](https://twitter.com/A_agadjanian/status/965362281105231873) that included screenshots from Google Trends queries to support the same claim made by the Vox article.
+Reflecting on the mass shooting event at the Stoneman Douglas High School in Florida in Feb 2018, I thought I'd take a quick look over the weekend to see how it compares to previous events in the US. In particular, I want to see if we can detect any differences in the public reaction to this event, compared to previous events. Part of the motivation comes from a story on *Vox* ['Teenagers are doing the impossible: keeping America's attention on guns'](https://www.vox.com/policy-and-politics/2018/2/21/17033308/florida-shooting-media-gun-control) that claims we seeing a sustained reaction to a mass shooting that we haven't seen before. A similar story appeared on [*Mashable*](https://mashable.com/2018/02/19/parkland-students-gun-control-debate-google-trends/#fAY2Ogo8Jkqb). I was also inspired by tweets from [Nate Silver](https://twitter.com/NateSilver538/status/965352547383959552) and [Alexander Agadjanian](https://twitter.com/A_agadjanian/status/965362281105231873) (who also [blogged about it](https://agadjanianpolitics.wordpress.com/2018/02/24/tracking-public-attention-toward-mass-shootings-using-google-trends-data/)) that included data from Google Trends queries to support the same claim made by the Vox article.
 
 Here we'll look at three sources of data to investigate public reactions:
 
@@ -19,11 +19,11 @@ One key question is: which events have generated sustained public interest in gu
 Reproducibility of this analysis
 --------------------------------
 
-This analysis is conducted entirely in R, and this document contains all the code used to collect, analyse and visualise the data. The analysis is reproducible and so it will be easy to update to see how the Stoneman Douglas High School event compares with previous events as time passes. The code and data are openly available at <https://github.com/benmarwick/test2>. In a month we can run it again to see how public interest has changed as we move further in time away from the Stoneman Douglas High School. Should another event occur in the future, we can add that event to this comparison to investigate public reactions.
+This analysis is conducted entirely in R, and this document contains all the code used to collect, analyse and visualise the data. The analysis is reproducible and so it will be easy to update to see how the Stoneman Douglas High School event compares with previous events as time passes. The code and data are openly available at <https://github.com/benmarwick/Persistence-of-Public-Interest-in-Gun-Control>. In a month we can run it again to see how public interest has changed as we move further in time away from the Stoneman Douglas High School. Should another event occur in the future, we can add that event to this comparison to investigate public reactions.
 
 The repository includes configuration files to open and run this document in RStudio in your web browser, making the code immediately reproducible by anyone, anywhere, without installing anything on your computer. We use the [Binder](https://mybinder.org/) project to create a sharable, reproducible, executible environment for this document. The `Dockerfile` file specifies a Docker image that we will use as out comptuational environment, and the `install.R` installs some additional packages that our code in this document depends on.
 
-Click on this 'launch binder' button to open a Jupyter notebook in your broswer, then choose 'New' -&gt; 'RStudio Session' (see [here for a screenshot](https://github.com/rocker-org/binder#opening-rstudio-once-binder-launches)), and then use RStudio to interact with this document to reproduce and explore the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/benmarwick/test2/master)
+Click on this 'launch binder' button to open a Jupyter notebook in your broswer, then choose 'New' -&gt; 'RStudio Session' (see [here for a screenshot](https://github.com/rocker-org/binder#opening-rstudio-once-binder-launches)), and then use RStudio to interact with this document to reproduce and explore the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/benmarwick/Persistence-of-Public-Interest-in-Gun-Control/master)
 
 After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you get to RStudio in your browser, click on README.Rmd in the lower right pane to open this file and interact with it.
 
@@ -35,7 +35,7 @@ There are three R packages contributed by the community of R users that are cent
 
 To clean, tidy and manipulate the data obtained by these pacakges I used the [tidyverse](https://www.tidyverse.org/).
 
-Note that many of the plots here are interactive - you can hover over the data points and lines to get more information. You can zoom in and out, and you can select and deselect events in the legend to make comparisons easier. These plots were made with the [ggplot2](http://ggplot2.tidyverse.org/) and [plotly](https://plot.ly/r/) packages. If you don't see the interactive plots below, [click here](https://rawgit.com/benmarwick/test2/master/README.html).
+Note that many of the plots here are interactive - you can hover over the data points and lines to get more information. You can zoom in and out, and you can select and deselect events in the legend to make comparisons easier. These plots were made with the [ggplot2](http://ggplot2.tidyverse.org/) and [plotly](https://plot.ly/r/) packages. If you don't see the interactive plots below, [click here](https://rawgit.com/benmarwick/Persistence-of-Public-Interest-in-Gun-Control/master/README.html).
 
 Data Source for Mass Shooting Events in the US
 ----------------------------------------------
@@ -495,9 +495,9 @@ The most striking difference between Stoneman Douglas High School event and prev
 Colophon
 --------
 
-This document was written in R Markdown. The code and data for this document is online at <https://github.com/benmarwick/test2>.
+This document was written in R Markdown. The code and data for this document is online at <https://github.com/benmarwick/Persistence-of-Public-Interest-in-Gun-Control>.
 
-This document was generated on 2018-02-26 01:12:10 using the following computational environment and dependencies:
+This document was generated on 2018-02-26 01:31:43 using the following computational environment and dependencies:
 
 ``` r
 sessioninfo::session_info()
@@ -673,5 +673,5 @@ git2r::repository(".")
 ```
 
     ## Local:    master C:/Users/bmarwick/Desktop/us_mass_shooting_events/
-    ## Remote:   master @ origin (https://github.com/benmarwick/test2.git)
-    ## Head:     [e6f4960] 2018-02-26: note that no SH data for WP
+    ## Remote:   master @ origin (https://github.com/benmarwick/Persistence-of-Public-Interest-in-Gun-Control.git)
+    ## Head:     [652469f] 2018-02-26: binder appears to be working
