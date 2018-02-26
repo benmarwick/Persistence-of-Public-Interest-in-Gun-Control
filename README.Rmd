@@ -42,7 +42,7 @@ The repository includes configuration files to open and run this document in RSt
 
 Click on this button to open RStudio and interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/benmarwick/test2/master?urlpath=rstudio) 
 
-After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser like the figure below, click on README.Rmd in the lower right pane to open this file and interact with it.
+After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser click on README.Rmd in the lower right pane to open this file and interact with it.
 
 There are three R packages contributed by the community of R users that are central to this project because they provide easy access to data sources:
 
@@ -52,7 +52,7 @@ There are three R packages contributed by the community of R users that are cent
 
 To clean, tidy and manipulate the data obtained by these pacakges I used the [tidyverse](https://www.tidyverse.org/). 
 
-Note that many of the plots here are interactive - you can hover over the data points and lines to get more information. You can zoom in and out, and you can select and deselect events in the legend to make comparisons easier. These plots were made with the [ggplot2](http://ggplot2.tidyverse.org/) and [plotly](https://plot.ly/r/) packages. If you don't see the interactive plots below, [click here](https://cdn.rawgit.com/benmarwick/test2/97119b4c/README.html).
+Note that many of the plots here are interactive - you can hover over the data points and lines to get more information. You can zoom in and out, and you can select and deselect events in the legend to make comparisons easier. These plots were made with the [ggplot2](http://ggplot2.tidyverse.org/) and [plotly](https://plot.ly/r/) packages. If you don't see the interactive plots below, [click here](https://rawgit.com/benmarwick/test2/master/README.html).
  
 ## Data Source for Mass Shooting Events in the US 
 
