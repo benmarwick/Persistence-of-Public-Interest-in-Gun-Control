@@ -1,7 +1,7 @@
 Persistence of Public Interest in Gun Control After Mass Shooting Events in the US: Is the Stoneman Douglas High School Event Different?
 ================
 Ben Marwick
-25 February, 2018
+26 February, 2018
 
 Introduction
 ------------
@@ -14,18 +14,18 @@ Here we'll look at three sources of data to investigate public reactions:
 -   page views of Wikipedia articles relating to gun control and mass shootings in the time before and after the events
 -   TV news mentions of gun control in the time before and after the events
 
-One key question is: which events have generated sustained public interest in gun control, and has the Feb 2018 event generated more interest than previous events? The result show that Stoneman Douglas event is not an outlier in Google search volume and TV news mentions, but it is remarkable as an outlier in generating page views to Wikipedia articles relating to gun control.
+One key question is: which events have generated sustained public interest in gun control, and has the Feb 2018 event generated more interest than previous events? The result show that Stoneman Douglas event is not an outlier in Google search volume and TV news mentions, but it is remarkable as an outlier in generating page views to Wikipedia articles relating to gun control (although we do not have data from the time of Sandy Hook to compare with this event, which is an outlier in other ways).
 
 Reproducibility of this analysis
 --------------------------------
 
 This analysis is conducted entirely in R, and this document contains all the code used to collect, analyse and visualise the data. The analysis is reproducible and so it will be easy to update to see how the Stoneman Douglas High School event compares with previous events as time passes. The code and data are openly available at <https://github.com/benmarwick/test2>. In a month we can run it again to see how public interest has changed as we move further in time away from the Stoneman Douglas High School. Should another event occur in the future, we can add that event to this comparison to investigate public reactions.
 
-The repository includes configuration files to open and run this document in RStudio in your web browser, making the code immediately reproducible by anyone, anywhere, without installing anything on your computer. We use the [Binder](https://mybinder.org/) project to create a sharable, reproducible, executible environment for this document. The `runtime.txt` file specifies the date of [MRAN](https://mran.microsoft.com/documents/rro/reproducibility) snapshot that we download the packages from, and the `install.R` installs these packages that our code in this document depends on.
+The repository includes configuration files to open and run this document in RStudio in your web browser, making the code immediately reproducible by anyone, anywhere, without installing anything on your computer. We use the [Binder](https://mybinder.org/) project to create a sharable, reproducible, executible environment for this document. The `Dockerfile` file specifies a Docker image that we will use as out comptuational environment, and the `install.R` installs some additional packages that our code in this document depends on.
 
-Click on this button to open RStudio and interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/benmarwick/test2/master?urlpath=rstudio)
+Click on this button to open a Jupyter notebook, then choose 'New' -&gt; 'RStudio Session' (see [here for a screenshot](https://github.com/rocker-org/binder#opening-rstudio-once-binder-launches)), and then use interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/benmarwick/test2/master)
 
-After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser like the figure below, click on README.Rmd in the lower right pane to open this file and interact with it.
+After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you get to RStudio in your browser, click on README.Rmd in the lower right pane to open this file and interact with it.
 
 There are three R packages contributed by the community of R users that are central to this project because they provide easy access to data sources:
 
@@ -35,7 +35,7 @@ There are three R packages contributed by the community of R users that are cent
 
 To clean, tidy and manipulate the data obtained by these pacakges I used the [tidyverse](https://www.tidyverse.org/).
 
-Note that many of the plots here are interactive - you can hover over the data points and lines to get more information. You can zoom in and out, and you can select and deselect events in the legend to make comparisons easier. These plots were made with the [ggplot2](http://ggplot2.tidyverse.org/) and [plotly](https://plot.ly/r/) packages. If you don't see the interactive plots below, [click here](https://cdn.rawgit.com/benmarwick/test2/97119b4c/README.html).
+Note that many of the plots here are interactive - you can hover over the data points and lines to get more information. You can zoom in and out, and you can select and deselect events in the legend to make comparisons easier. These plots were made with the [ggplot2](http://ggplot2.tidyverse.org/) and [plotly](https://plot.ly/r/) packages. If you don't see the interactive plots below, [click here](https://rawgit.com/benmarwick/test2/master/README.html).
 
 Data Source for Mass Shooting Events in the US
 ----------------------------------------------
@@ -497,7 +497,7 @@ Colophon
 
 This document was written in R Markdown. The code and data for this document is online at <https://github.com/benmarwick/test2>.
 
-This document was generated on 2018-02-25 23:38:01 using the following computational environment and dependencies:
+This document was generated on 2018-02-26 01:01:54 using the following computational environment and dependencies:
 
 ``` r
 sessioninfo::session_info()
@@ -512,94 +512,85 @@ sessioninfo::session_info()
     ##  language (EN)                        
     ##  collate  English_Australia.1252      
     ##  tz       America/Los_Angeles         
-    ##  date     2018-02-25                  
+    ##  date     2018-02-26                  
     ## 
     ## - Packages --------------------------------------------------------------
-    ##  package      * version    date      
-    ##  anytime        0.3.0      2017-06-05
-    ##  assertthat     0.2.0      2017-04-11
-    ##  backports      1.1.2      2017-12-13
-    ##  bindr          0.1        2016-11-13
-    ##  bindrcpp     * 0.2        2017-06-17
-    ##  broom          0.4.3      2017-11-20
-    ##  cellranger     1.1.0.9000 2017-05-31
-    ##  cli            1.0.0      2017-11-05
-    ##  clisymbols     1.2.0      2017-06-14
-    ##  codetools      0.2-15     2016-10-05
-    ##  colorspace     1.3-2      2016-12-14
-    ##  crayon         1.3.4      2018-02-10
-    ##  crosstalk      1.0.0      2016-12-21
-    ##  curl           3.1        2017-12-12
-    ##  data.table     1.10.4-3   2017-10-27
-    ##  devtools       1.13.4     2017-11-09
-    ##  digest         0.6.15     2018-01-28
-    ##  dplyr        * 0.7.4      2017-09-28
-    ##  evaluate       0.10.1     2017-06-24
-    ##  forcats      * 0.2.0      2017-01-23
-    ##  foreign        0.8-69     2017-06-21
-    ##  fuzzyjoin    * 0.1.3      2017-06-19
-    ##  ggplot2      * 2.2.1.9000 2018-02-26
-    ##  git2r          0.21.0     2018-01-04
-    ##  glue         * 1.2.0      2017-10-29
-    ##  gtable         0.2.0      2016-02-26
-    ##  gtrendsR     * 1.4.1      2018-02-23
-    ##  haven          1.1.1      2018-01-18
-    ##  hms            0.4.1      2018-01-24
-    ##  htmltools      0.3.6      2017-04-28
-    ##  htmlwidgets    1.0        2018-01-20
-    ##  httpuv         1.3.5      2017-07-04
-    ##  httr           1.3.1      2017-08-20
-    ##  jsonlite       1.5        2017-06-01
-    ##  knitr          1.19       2018-01-29
-    ##  labeling       0.3        2014-08-23
-    ##  lattice        0.20-35    2017-03-25
-    ##  lazyeval       0.2.1      2017-10-29
-    ##  lubridate    * 1.7.1      2017-11-03
-    ##  magrittr       1.5        2014-11-22
-    ##  memoise        1.1.0      2017-04-21
-    ##  mime           0.5        2016-07-07
-    ##  mnormt         1.5-5      2016-10-15
-    ##  modelr         0.1.1      2017-07-24
-    ##  munsell        0.4.3      2016-02-13
-    ##  nlme           3.1-131    2017-02-06
-    ##  pageviews    * 0.3.0      2016-10-17
-    ##  pillar         1.1.0.9000 2018-02-10
-    ##  pkgconfig      2.0.1      2017-03-21
-    ##  plotly       * 4.7.1      2017-07-29
-    ##  plyr           1.8.4      2016-06-08
-    ##  psych          1.7.8      2017-09-09
-    ##  purrr        * 0.2.4      2017-10-18
-    ##  purrrlyr     * 0.0.2      2017-05-13
-    ##  R6             2.2.2      2017-06-17
-    ##  RApiDatetime   0.0.3      2017-04-02
-    ##  RColorBrewer   1.1-2      2014-12-07
-    ##  Rcpp           0.12.15    2018-01-20
-    ##  readr        * 1.1.1      2017-05-16
-    ##  readxl         1.0.0      2017-04-18
-    ##  reshape2       1.4.3      2017-12-11
-    ##  rlang          0.2.0.9000 2018-02-26
-    ##  rmarkdown      1.8        2017-11-17
-    ##  rprojroot      1.3-2      2018-01-03
-    ##  rstudioapi     0.7.0-9000 2017-12-23
-    ##  rvest          0.3.2      2016-06-17
-    ##  scales         0.5.0.9000 2018-02-26
-    ##  sessioninfo    1.0.0      2017-07-28
-    ##  shiny          1.0.5      2017-08-23
-    ##  stringi        1.1.6      2017-11-17
-    ##  stringr      * 1.2.0      2017-02-18
-    ##  tibble       * 1.4.2      2018-01-22
-    ##  tidyr        * 0.8.0      2018-01-29
-    ##  tidyselect     0.2.3      2017-11-06
-    ##  tidyverse    * 1.2.1      2018-02-05
-    ##  utf8           1.1.3      2018-01-03
-    ##  viridisLite    0.3.0      2018-02-01
-    ##  webshot        0.5.0      2017-11-29
-    ##  withr          2.1.1.9000 2018-02-26
-    ##  xml2           1.2.0      2018-01-24
-    ##  xtable         1.8-2      2016-02-05
-    ##  yaml           2.1.16     2017-12-12
+    ##  package     * version    date      
+    ##  assertthat    0.2.0      2017-04-11
+    ##  backports     1.1.2      2017-12-13
+    ##  bindr         0.1        2016-11-13
+    ##  bindrcpp    * 0.2        2017-06-17
+    ##  broom         0.4.3      2017-11-20
+    ##  cellranger    1.1.0.9000 2017-05-31
+    ##  cli           1.0.0      2017-11-05
+    ##  clisymbols    1.2.0      2017-06-14
+    ##  colorspace    1.3-2      2016-12-14
+    ##  crayon        1.3.4      2018-02-10
+    ##  crosstalk     1.0.0      2016-12-21
+    ##  curl          3.1        2017-12-12
+    ##  data.table    1.10.4-3   2017-10-27
+    ##  devtools      1.13.4     2017-11-09
+    ##  digest        0.6.15     2018-01-28
+    ##  dplyr       * 0.7.4      2017-09-28
+    ##  evaluate      0.10.1     2017-06-24
+    ##  forcats     * 0.2.0      2017-01-23
+    ##  foreign       0.8-69     2017-06-21
+    ##  fuzzyjoin   * 0.1.4      2018-02-26
+    ##  ggplot2     * 2.2.1.9000 2018-02-26
+    ##  git2r         0.21.0     2018-01-04
+    ##  glue        * 1.2.0      2017-10-29
+    ##  gtable        0.2.0      2016-02-26
+    ##  haven         1.1.1      2018-01-18
+    ##  hms           0.4.1      2018-01-24
+    ##  htmltools     0.3.6      2017-04-28
+    ##  htmlwidgets   1.0        2018-01-20
+    ##  httpuv        1.3.5      2017-07-04
+    ##  httr          1.3.1      2017-08-20
+    ##  jsonlite      1.5        2017-06-01
+    ##  knitr         1.19       2018-01-29
+    ##  labeling      0.3        2014-08-23
+    ##  lattice       0.20-35    2017-03-25
+    ##  lazyeval      0.2.1      2017-10-29
+    ##  lubridate   * 1.7.1      2017-11-03
+    ##  magrittr      1.5        2014-11-22
+    ##  memoise       1.1.0      2017-04-21
+    ##  mime          0.5        2016-07-07
+    ##  mnormt        1.5-5      2016-10-15
+    ##  modelr        0.1.1      2017-07-24
+    ##  munsell       0.4.3      2016-02-13
+    ##  nlme          3.1-131    2017-02-06
+    ##  pillar        1.1.0.9000 2018-02-10
+    ##  pkgconfig     2.0.1      2017-03-21
+    ##  plotly      * 4.7.1      2017-07-29
+    ##  plyr          1.8.4      2016-06-08
+    ##  psych         1.7.8      2017-09-09
+    ##  purrr       * 0.2.4      2017-10-18
+    ##  R6            2.2.2      2017-06-17
+    ##  Rcpp          0.12.15    2018-01-20
+    ##  readr       * 1.1.1      2017-05-16
+    ##  readxl        1.0.0      2017-04-18
+    ##  reshape2      1.4.3      2017-12-11
+    ##  rlang         0.2.0.9000 2018-02-26
+    ##  rmarkdown     1.8        2017-11-17
+    ##  rprojroot     1.3-2      2018-01-03
+    ##  rstudioapi    0.7.0-9000 2017-12-23
+    ##  rvest         0.3.2      2016-06-17
+    ##  scales        0.5.0.9000 2018-02-26
+    ##  sessioninfo   1.0.0      2017-07-28
+    ##  shiny         1.0.5      2017-08-23
+    ##  stringi       1.1.6      2017-11-17
+    ##  stringr     * 1.3.0      2018-02-19
+    ##  tibble      * 1.4.2      2018-01-22
+    ##  tidyr       * 0.8.0      2018-01-29
+    ##  tidyselect    0.2.3      2017-11-06
+    ##  tidyverse   * 1.2.1      2018-02-05
+    ##  viridisLite   0.3.0      2018-02-01
+    ##  webshot       0.5.0      2017-11-29
+    ##  withr         2.1.1.9000 2018-02-26
+    ##  xml2          1.2.0      2018-01-24
+    ##  xtable        1.8-2      2016-02-05
+    ##  yaml          2.1.16     2017-12-12
     ##  source                                 
-    ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.0)                         
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.0)                         
@@ -608,7 +599,6 @@ sessioninfo::session_info()
     ##  Github (rsheets/cellranger@024d5ba)    
     ##  CRAN (R 3.4.2)                         
     ##  Github (gaborcsardi/clisymbols@e49b4f5)
-    ##  CRAN (R 3.4.0)                         
     ##  CRAN (R 3.4.0)                         
     ##  Github (gaborcsardi/crayon@95b3eae)    
     ##  CRAN (R 3.4.0)                         
@@ -620,12 +610,11 @@ sessioninfo::session_info()
     ##  CRAN (R 3.4.0)                         
     ##  CRAN (R 3.4.0)                         
     ##  CRAN (R 3.4.0)                         
-    ##  CRAN (R 3.4.0)                         
+    ##  Github (dgrtwo/fuzzyjoin@6d14011)      
     ##  Github (tidyverse/ggplot2@39e4a3b)     
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.2)                         
     ##  CRAN (R 3.4.0)                         
-    ##  Github (PMassicotte/gtrendsR@7b3dc40)  
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.0)                         
@@ -644,7 +633,6 @@ sessioninfo::session_info()
     ##  CRAN (R 3.4.0)                         
     ##  CRAN (R 3.4.1)                         
     ##  CRAN (R 3.4.0)                         
-    ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.3)                         
     ##  Github (r-lib/pillar@595d1ac)          
     ##  CRAN (R 3.4.0)                         
@@ -652,9 +640,6 @@ sessioninfo::session_info()
     ##  CRAN (R 3.4.0)                         
     ##  CRAN (R 3.4.2)                         
     ##  CRAN (R 3.4.2)                         
-    ##  CRAN (R 3.4.0)                         
-    ##  CRAN (R 3.4.0)                         
-    ##  CRAN (R 3.4.1)                         
     ##  CRAN (R 3.4.0)                         
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.0)                         
@@ -669,12 +654,11 @@ sessioninfo::session_info()
     ##  Github (r-lib/sessioninfo@8de1163)     
     ##  CRAN (R 3.4.1)                         
     ##  CRAN (R 3.4.2)                         
-    ##  CRAN (R 3.4.0)                         
+    ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.2)                         
     ##  Github (hadley/tidyverse@03ccf9c)      
-    ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.3)                         
     ##  CRAN (R 3.4.3)                         
     ##  Github (jimhester/withr@5d05571)       
@@ -690,4 +674,4 @@ git2r::repository(".")
 
     ## Local:    master C:/Users/bmarwick/Desktop/us_mass_shooting_events/
     ## Remote:   master @ origin (https://github.com/benmarwick/test2.git)
-    ## Head:     [fbd5a0b] 2018-02-25: summarise findings in intro
+    ## Head:     [42c7685] 2018-02-26: remove some pkgs from  install.R

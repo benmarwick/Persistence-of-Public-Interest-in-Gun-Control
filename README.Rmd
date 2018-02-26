@@ -32,17 +32,17 @@ Here we'll look at three sources of data to investigate public reactions:
 - page views of Wikipedia articles relating to gun control and mass shootings in the time before and after the events 
 - TV news mentions of gun control in the time before and after the events 
 
-One key question is: which events have generated sustained public interest in gun control, and has the Feb 2018 event generated more interest than previous events? The result show that Stoneman Douglas event is not an outlier in Google search volume and TV news mentions, but it is remarkable as an outlier in generating page views to Wikipedia articles relating to gun control. 
+One key question is: which events have generated sustained public interest in gun control, and has the Feb 2018 event generated more interest than previous events? The result show that Stoneman Douglas event is not an outlier in Google search volume and TV news mentions, but it is remarkable as an outlier in generating page views to Wikipedia articles relating to gun control (although we do not have data from the time of Sandy Hook to compare with this event, which is an outlier in other ways). 
 
 ## Reproducibility of this analysis
 
 This analysis is conducted entirely in R, and this document contains all the code used to collect, analyse and visualise the data. The analysis is reproducible and so it will be easy to update to see how the Stoneman Douglas High School event compares with previous events as time passes. The code and data are openly available at <https://github.com/benmarwick/test2>. In a month we can run it again to see how public interest has changed as we move further in time away from the Stoneman Douglas High School. Should another event occur in the future, we can add that event to this comparison to investigate public reactions. 
 
-The repository includes configuration files to open and run this document in RStudio in your web browser, making the code immediately reproducible by anyone, anywhere, without installing anything on your computer. We use the [Binder](https://mybinder.org/) project to create a sharable, reproducible, executible environment for this document. The `runtime.txt` file specifies the date of [MRAN](https://mran.microsoft.com/documents/rro/reproducibility) snapshot that we download the packages from, and the `install.R` installs these packages that our code in this document depends on. 
+The repository includes configuration files to open and run this document in RStudio in your web browser, making the code immediately reproducible by anyone, anywhere, without installing anything on your computer. We use the [Binder](https://mybinder.org/) project to create a sharable, reproducible, executible environment for this document. The `Dockerfile` file specifies a Docker image that we will use as out comptuational environment, and the `install.R` installs some additional packages that our code in this document depends on. 
 
-Click on this button to open RStudio and interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/benmarwick/test2/master?urlpath=rstudio) 
+Click on this button to open a Jupyter notebook, then choose 'New' -> 'RStudio Session' (see [here for a screenshot](https://github.com/rocker-org/binder#opening-rstudio-once-binder-launches)), and then use interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/benmarwick/test2/master) 
 
-After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser click on README.Rmd in the lower right pane to open this file and interact with it.
+After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you get to RStudio in your browser, click on README.Rmd in the lower right pane to open this file and interact with it.
 
 There are three R packages contributed by the community of R users that are central to this project because they provide easy access to data sources:
 
