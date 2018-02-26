@@ -23,7 +23,7 @@ This analysis is conducted entirely in R, and this document contains all the cod
 
 The repository includes configuration files to open and run this document in RStudio in your web browser, making the code immediately reproducible by anyone, anywhere, without installing anything on your computer. We use the [Binder](https://mybinder.org/) project to create a sharable, reproducible, executible environment for this document. The `Dockerfile` file specifies a Docker image that we will use as out comptuational environment, and the `install.R` installs some additional packages that our code in this document depends on.
 
-Click on this button to open a Jupyter notebook, then choose 'New' -&gt; 'RStudio Session' (see [here for a screenshot](https://github.com/rocker-org/binder#opening-rstudio-once-binder-launches)), and then use interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/benmarwick/test2/master)
+Click on this 'launch binder' button to open a Jupyter notebook in your broswer, then choose 'New' -&gt; 'RStudio Session' (see [here for a screenshot](https://github.com/rocker-org/binder#opening-rstudio-once-binder-launches)), and then use RStudio to interact with this document to reproduce and explore the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/benmarwick/test2/master)
 
 After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you get to RStudio in your browser, click on README.Rmd in the lower right pane to open this file and interact with it.
 
@@ -497,7 +497,7 @@ Colophon
 
 This document was written in R Markdown. The code and data for this document is online at <https://github.com/benmarwick/test2>.
 
-This document was generated on 2018-02-26 01:01:54 using the following computational environment and dependencies:
+This document was generated on 2018-02-26 01:12:10 using the following computational environment and dependencies:
 
 ``` r
 sessioninfo::session_info()
@@ -674,4 +674,4 @@ git2r::repository(".")
 
     ## Local:    master C:/Users/bmarwick/Desktop/us_mass_shooting_events/
     ## Remote:   master @ origin (https://github.com/benmarwick/test2.git)
-    ## Head:     [42c7685] 2018-02-26: remove some pkgs from  install.R
+    ## Head:     [e6f4960] 2018-02-26: note that no SH data for WP
