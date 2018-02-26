@@ -1,4 +1,4 @@
-Persistence of Public Interest in Gun Control After US Mass Shooting Events: Is the Stoneman Douglas High School Event Different?
+Persistence of Public Interest in Gun Control After Mass Shooting Events in the US: Is the Stoneman Douglas High School Event Different?
 ================
 Ben Marwick
 25 February, 2018
@@ -14,7 +14,7 @@ Here we'll look at three sources of data to investigate public reactions:
 -   page views of Wikipedia articles relating to gun control and mass shootings in the time before and after the events
 -   TV news mentions of gun control in the time before and after the events
 
-One key question is: which events have generated sustained public interest in gun control, and has the Feb 2018 event generated more interest than previous events?
+One key question is: which events have generated sustained public interest in gun control, and has the Feb 2018 event generated more interest than previous events? The result show that Stoneman Douglas event is not an outlier in Google search volume and TV news mentions, but it is remarkable as an outlier in generating page views to Wikipedia articles relating to gun control.
 
 Reproducibility of this analysis
 --------------------------------
@@ -499,7 +499,7 @@ Colophon
 
 This document was written in R Markdown. The code and data for this document is online at <https://github.com/benmarwick/test2>.
 
-This document was generated on 2018-02-25 23:21:54 using the following computational environment and dependencies:
+This document was generated on 2018-02-25 23:32:19 using the following computational environment and dependencies:
 
 ``` r
 sessioninfo::session_info()
@@ -692,4 +692,4 @@ git2r::repository(".")
 
     ## Local:    master C:/Users/bmarwick/Desktop/us_mass_shooting_events/
     ## Remote:   master @ origin (https://github.com/benmarwick/test2.git)
-    ## Head:     [97119b4] 2018-02-25: initial
+    ## Head:     [a0ede17] 2018-02-25: tidy up some plots, add colophon
