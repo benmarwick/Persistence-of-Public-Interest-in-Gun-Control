@@ -1,2 +1,2 @@
-install.packages(c( "tidyverse", "glue", "lubridate", "plotly", "purrrlyr",  "knitr", "sessioninfo", "git2r"))
+install.packages(c("glue", "lubridate", "plotly", "purrrlyr",  "sessioninfo"))
 devtools::install_github(c("tidyverse/ggplot2", "PMassicotte/gtrendsR", "Ironholds/pageviews", "dgrtwo/fuzzyjoin"))
