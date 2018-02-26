@@ -1,0 +1,9 @@
+install.packages(c("tidyverse", 
+                   "glue", 
+                   "lubridate",
+                   "plotly",
+                   "purrrlyr",
+                   "knitr"))
+devtools::install_github(c("PMassicotte/gtrendsR",
+                          "Ironholds/pageviews",
+                          "dgrtwo/fuzzyjoin")
