@@ -25,9 +25,7 @@ The repository includes configuration files to open and run this document in RSt
 
 Click on this button to open RStudio and interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/benmarwick/test2/master?urlpath=rstudio)
 
-After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser like the figure below, click on README.Rmd in the lower right pane to open this file and interact with it:
-
-![](figures/rstudio.png)
+After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser like the figure below, click on README.Rmd in the lower right pane to open this file and interact with it.
 
 There are three R packages contributed by the community of R users that are central to this project because they provide easy access to data sources:
 
@@ -499,7 +497,7 @@ Colophon
 
 This document was written in R Markdown. The code and data for this document is online at <https://github.com/benmarwick/test2>.
 
-This document was generated on 2018-02-25 23:32:19 using the following computational environment and dependencies:
+This document was generated on 2018-02-25 23:38:01 using the following computational environment and dependencies:
 
 ``` r
 sessioninfo::session_info()
@@ -692,4 +690,4 @@ git2r::repository(".")
 
     ## Local:    master C:/Users/bmarwick/Desktop/us_mass_shooting_events/
     ## Remote:   master @ origin (https://github.com/benmarwick/test2.git)
-    ## Head:     [a0ede17] 2018-02-25: tidy up some plots, add colophon
+    ## Head:     [fbd5a0b] 2018-02-25: summarise findings in intro

@@ -42,9 +42,7 @@ The repository includes configuration files to open and run this document in RSt
 
 Click on this button to open RStudio and interact with this document to reproduce the analysis in your browser: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/benmarwick/test2/master?urlpath=rstudio) 
 
-After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser like the figure below, click on README.Rmd in the lower right pane to open this file and interact with it:
-
-![](figures/rstudio.png)
+After you click on the button, Binder will take a few minutes to load the packages we depend on. Once you see RStudio in your browser like the figure below, click on README.Rmd in the lower right pane to open this file and interact with it.
 
 There are three R packages contributed by the community of R users that are central to this project because they provide easy access to data sources:
 
